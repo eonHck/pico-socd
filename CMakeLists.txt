@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.29)
+include(pico_sdk_import.cmake)
+project(pico_socd C CXX ASM)
+pico_sdk_init()
+add_executable(pico_socd pico_socd.c)
+target_link_libraries(pico_socd pico_stdlib)
+pico_add_extra_outputs(pico_socd)
